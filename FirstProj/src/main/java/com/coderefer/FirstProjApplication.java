@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 
 import com.coderefer.beans.WishMessageGenerator;
 
@@ -14,10 +15,19 @@ import com.coderefer.beans.WishMessageGenerator;
 public class FirstProjApplication {
 	
 	@Bean(name="ldt")
+	@Scope("prototype")
 	public LocalDateTime createLocalDateTime() {
 		System.out.println("FirstProjApplication.createLocalDateTime()");
 		return LocalDateTime.now();
+	}	
+	
+	@Bean(name="ldt1")
+	@Scope("prototype")
+	public LocalDateTime createLocalDateTime1() {
+		System.out.println("FirstProjApplication.createLocalDateTime()");
+		return LocalDateTime.now();
 	}
+
 
 	public static void main(String[] args) {
 //		get IOC Container
