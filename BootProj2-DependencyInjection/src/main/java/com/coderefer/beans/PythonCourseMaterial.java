@@ -3,9 +3,9 @@ package com.coderefer.beans;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component("Python")
 @Primary
-public class PythonCourseMaterial implements ICourseMaterial{
+@Component("Python")
+public final class PythonCourseMaterial implements ICourseMaterial{
 	
 	public PythonCourseMaterial() {
 		System.out.println("PythonCourseMaterial:: 0-param constructor");

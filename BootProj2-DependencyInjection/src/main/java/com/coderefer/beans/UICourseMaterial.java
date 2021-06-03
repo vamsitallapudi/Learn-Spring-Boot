@@ -3,7 +3,7 @@ package com.coderefer.beans;
 import org.springframework.stereotype.Component;
 
 @Component("UI")
-public class UICourseMaterial implements ICourseMaterial{
+public final class UICourseMaterial implements ICourseMaterial{
 	
 	public UICourseMaterial() {
 		System.out.println("UICourseMaterial:: 0-param constructor");

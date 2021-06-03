@@ -3,7 +3,7 @@ package com.coderefer.beans;
 import org.springframework.stereotype.Component;
 
 @Component("Java")
-public class JavaCourseMaterial implements ICourseMaterial{
+public final class JavaCourseMaterial implements ICourseMaterial{
 	
 	public JavaCourseMaterial() {
 		System.out.println("JavaCourseMaterial:: 0-param constructor");

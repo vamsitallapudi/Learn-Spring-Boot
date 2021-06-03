@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("stud")
-public class Student {
-	@Autowired 
+public final class Student {
+	@Autowired
 	@Qualifier("Java")
-	private ICourseMaterial material;
+	private ICourseMaterial material; //HAS-A property
 	
 	public void preparation(String examName) {
 		System.out.println("preparation started for " + examName);

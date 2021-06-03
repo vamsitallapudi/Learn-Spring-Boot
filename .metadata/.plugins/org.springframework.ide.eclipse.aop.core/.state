@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="FirstProj"/>
+<aop-project name="BootProj3-DependencyInjection-JavaConfigAnnotations"/>
+<aop-project name="BootProj2-DependencyInjection"/>
 </aop-reference-model>
