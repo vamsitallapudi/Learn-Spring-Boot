@@ -995,3 +995,4 @@ java.io.FileNotFoundException: /Users/vamsitallapudi/Documents/learn spring boot
 2021-06-03 21:03:10,010 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-06-03 21:03:10,010 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-06-03 21:03:10,010 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/vamsitallapudi/Documents/springboot/learn spring boot/BootProj3-DependencyInjection-JavaConfigAnnotations/src/test/resources
+2021-06-05 11:55:45,465 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
