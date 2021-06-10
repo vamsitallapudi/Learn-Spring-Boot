@@ -17,7 +17,7 @@ import com.coderefer.bo.EmployeeBO;
 @Repository("empDAO")
 public class EmployeeDaoImpl implements IEmployeeDAO {
 	private static final String GET_EMPS_BY_DESG = 
-			"SELECT EMPNO, ENAME, JOB, SAL, DEPTNO, MGR FROM EMP WHERE JOB IN ";
+			"SELECT EMPNO, ENAME, JOB, SAL, DEPTNO, MGRNO FROM EMP WHERE JOB IN ";
 	@Autowired
 	private DataSource ds;
 	
