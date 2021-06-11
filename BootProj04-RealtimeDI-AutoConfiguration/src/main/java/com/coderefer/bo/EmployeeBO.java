@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class EmployeeBO {
 	
-	private Integer srNo;
 	private Integer empNo;
 	private String ename;
 	private String job;

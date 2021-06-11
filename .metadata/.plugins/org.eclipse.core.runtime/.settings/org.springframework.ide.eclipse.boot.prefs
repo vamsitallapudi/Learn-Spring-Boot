@@ -1,11 +1,14 @@
 eclipse.preferences.version=1
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=BootProj2-DependencyInjection
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.jdbc=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.postgresql=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=BootProj04-RealtimeDI-AutoConfiguration
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=2.5.0
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Second Application of Spring Boot
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.coderefer
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=11
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=BootProj2-DependencyInjection
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=BootProj04-RealtimeDI-AutoConfiguration
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.coderefer
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN

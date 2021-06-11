@@ -22,6 +22,8 @@ public class EmployeeDaoImpl implements IEmployeeDAO {
 	private DataSource ds;
 	
 	
+	
+	
 	@Override
 	public List<EmployeeBO> getEmpsByDesg(String cond) throws Exception {
 		List<EmployeeBO> listBO = null;
@@ -33,7 +35,8 @@ public class EmployeeDaoImpl implements IEmployeeDAO {
 			) {
 			
 //			send and execute SQL Query in DB s/w
-			ResultSet rs = st.executeQuery(GET_EMPS_BY_DESG + cond + "ORDER BY JOB");
+//			SELECT EMPNO, ENAME, JOB, SAL, DEPTNO, MGRNO FROM EMP WHERE JOB IN ('Technical Lead') ORDER BY JOB
+			ResultSet rs = st.executeQuery(GET_EMPS_BY_DESG + cond + " ORDER BY JOB");
 			
 //			convert RS Object records to List of BO Class objects
 			
@@ -46,7 +49,6 @@ public class EmployeeDaoImpl implements IEmployeeDAO {
 				bo.setJob(rs.getString(3));
 				bo.setMgrNo(rs.getInt(4));
 				bo.setSal(rs.getDouble(5));
-				bo.setSrNo(rs.getInt(6));
 				
 				listBO.add(bo);
 			} //while
