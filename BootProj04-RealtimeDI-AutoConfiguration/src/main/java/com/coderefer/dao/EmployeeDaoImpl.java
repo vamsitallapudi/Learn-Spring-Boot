@@ -27,6 +27,7 @@ public class EmployeeDaoImpl implements IEmployeeDAO {
 	@Override
 	public List<EmployeeBO> getEmpsByDesg(String cond) throws Exception {
 		List<EmployeeBO> listBO = null;
+		System.out.println(ds.getClass());
 		try (
 //				get pooled jdbc conn
 				Connection con = ds.getConnection();
