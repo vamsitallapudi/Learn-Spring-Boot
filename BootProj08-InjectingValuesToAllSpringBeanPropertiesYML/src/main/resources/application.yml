@@ -1,0 +1,22 @@
+emp:
+  info:
+    comp-details:
+      location: hyd
+      size: 2000
+      title: HCL Technologies
+    id: 1001
+    id-details:
+      adharNo: 1212121212
+      panNo: ANABA1234A
+      voterId: 1234123412341234
+    name: vamsi
+    nick-names:
+    - krishna
+    - vamshi
+    - tallapudi
+    phone-numbers:
+    - 9999999999
+    - 8888888888
+    team-members:
+    - ravi
+    - teja

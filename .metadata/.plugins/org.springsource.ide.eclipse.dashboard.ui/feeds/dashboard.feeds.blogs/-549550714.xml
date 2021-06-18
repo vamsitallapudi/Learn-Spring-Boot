@@ -5,7 +5,136 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-06-10T22:00:00Z</updated>
+  <updated>2021-06-17T11:00:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Azure Developer Advocate Rory Preddy on Spring, Java, Azure Spring Cloud and more</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/06/17/a-bootiful-podcast-azure-developer-advocate-rory-preddy-on-spring-java-azure-spring-cloud-and-more" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-06-17:4471</id>
+    <updated>2021-06-17T11:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of a Bootiful Podcast! In this installment, Josh Long (@starbuxman) talks to Azure Developer Advocate Rory Preddy (@rorypreddy).&lt;/p&gt;
+&lt;iframe title="Azure Developer Advocate Rory Preddy on Spring, Java, and Azure Spring Cloud" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=6rfn3-10692c4-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - June 15th, 2021</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/06/16/this-week-in-spring-june-15th-2021" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-06-16:4469</id>
+    <updated>2021-06-16T10:18:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! How&amp;rsquo;re you doing? I&amp;rsquo;m silly stoked! This week saw the release of Spring Native 0.10.0 and it is &lt;em&gt;awesome&lt;/em&gt;! You absolutely have to check this release out. I put together an &lt;a href="https://www.youtube.com/watch?v=JsUAGJqdvaA"&gt;episode of Spring Tips&lt;/a&gt;, the most comprehensive of its kind, introducing (almost) everything you&amp;rsquo;ll need to know about Spring Native and Spring Native 0.10.0 in particular. Start here. Spring Native is awesome and this is the comprehensive introduction I wish I&amp;rsquo;d had at the start. &lt;/p&gt;
+&lt;p&gt;The next time we meet in this humble column, next week, will be June 22nd, and by then we&amp;rsquo;ll have passed summer solstice - the longest day in the year! - and the beginning of summer. Farewell (for now) to Spring, the season, and long live Spring, the easiest and most productive path to production for your applications. &lt;/p&gt;
+&lt;p&gt;Anyway, my friends, we&amp;rsquo;ve got a ton of things to look at this week, starting of course with that Spring Native video and release announcement, of course, so let&amp;rsquo;s get to it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In this week&amp;rsquo;s installment of Spring Tips, I look at &lt;a href="https://spring.io/blog/2021/06/14/spring-native-0-10-0-available-now"&gt;Spring Native 0.10.0, available now&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/06/10/a-bootiful-podcast-redgate-technical-lead-for-the-flyway-team-mikiel-agutu-on-database-migrations-and-continuous-delivery"&gt;A Bootiful Podcast: Redgate technical lead for the Flyway team Mikiel Agutu on database migrations and continuous delivery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/yanashin18618/status/1404198914643750917?s=12"&gt;An updated Spring Cloud GCP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blogs.vmware.com/vmworld/2021/06/imagine-that-register-for-vmworld-2021-now.html"&gt;Register for VMworld 2021 Now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;And while you&amp;rsquo;re at it, register for &lt;a href="https://springone.io"&gt;SpringOne&lt;/a&gt;, too!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/06/10/spring-boot-2-3-12-release-available-now"&gt;Spring Boot 2.3.12.RELEASE available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/06/10/spring-boot-2-4-7-available-now"&gt;Spring Boot 2.4.7 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/06/10/spring-boot-2-5-1-is-now-available"&gt;Spring Boot 2.5.1 is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/06/09/spring-framework-5-3-8-available-now"&gt;Spring Framework 5.3.8 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/VMware/status/1403028076716494864"&gt;Do you need help making sense of Kubernetes? Here&amp;rsquo;s your chance to ask Kubernetes co-creator Joe Beda anything during this live event&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Native 0.10.0 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/06/14/spring-native-0-10-0-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Sébastien Deleuze</name>
+    </author>
+    <id>tag:spring.io,2021-06-14:4468</id>
+    <updated>2021-06-14T15:11:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the team and everyone who has contributed, I’m happy to announce that Spring Native 0.10.0 has been released. It is based on &lt;a href="https://spring.io/blog/2021/05/20/spring-boot-2-5-is-now-ga"&gt;Spring Boot 2.5&lt;/a&gt; and &lt;a href="https://www.graalvm.org/release-notes/21_1/"&gt;GraalVM 21.1&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release is packed with features, highlights include:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Introduction of native testing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A new official Gradle plugin from the GraalVM team.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Introduction of ahead-of-time proxies usable on classes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;It also includes &lt;a href="https://github.com/spring-projects-experimental/spring-native/releases/tag/0.10.0"&gt;43 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt; has crafted a great video to present those new features, so check this out:&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/JsUAGJqdvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="native-testing-and-gradle-plugin"&gt;&lt;a class="anchor" href="#native-testing-and-gradle-plugin"&gt;&lt;/a&gt;Native testing and Gradle plugin&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We have been collaborating with the GraalVM team on bringing native image to the next level in terms of build plugins. The new &lt;a href="https://github.com/graalvm/native-build-tools"&gt;native build tools&lt;/a&gt; replace the former &lt;code&gt;native-image-maven-plugin&lt;/code&gt; and allow to build and test your native application using a local &lt;code&gt;native-image&lt;/code&gt; compiler.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;While only Maven support was previously available, now both Maven and Gradle plugins are provided. If you are upgrading, the new Maven plugin coordinates are &lt;code&gt;org.graalvm.buildtools:native-maven-plugin:0.9.0&lt;/code&gt;. After &lt;a href="https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/#_add_the_native_build_tools_plugin"&gt;configuring the native build tools plugin&lt;/a&gt;, you can build your application with &lt;code&gt;mvn -Pnative -DskipTests package&lt;/code&gt; or &lt;code&gt;gradle nativeBuild&lt;/code&gt;. But you can also run your JUnit 5 tests as a native image with &lt;code&gt;mvn -Pnative test&lt;/code&gt; or &lt;code&gt;gradle nativeTest&lt;/code&gt;. Spring Native itself  has been upgraded to add initial testing support so your &lt;code&gt;@SpringBootTest&lt;/code&gt; will run as a native image. This is an important milestone for native Spring Boot applications, but also for the JVM ecosystem including Spring itself which can now use those official plugins to improve the quality and the maintainability of the native support. You can read this &lt;a href="https://medium.com/graalvm/gradle-and-maven-plugins-for-native-image-with-initial-junit-testing-support-dde00a8caf0b"&gt;GraalVM dedicated blog post&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt; has been updated to configure the native build tools out-of-the-box in addition to the Buildpacks native support, so you can use the one that fits your needs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="ahead-of-time-proxies-usable-on-classes"&gt;&lt;a class="anchor" href="#ahead-of-time-proxies-usable-on-classes"&gt;&lt;/a&gt;Ahead-of-time proxies usable on classes&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;With native images, proxies need to be defined at build time. Until now, Spring Native had just support for JDK proxies usable only on interfaces. Proxies on classes typically handled on the JVM via CGLIB proxies were not supported because generating bytecode at runtime is not supported in native world.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="java"&gt;// Typical security use case of a class proxy now supported on native
+@Service
+public class GreetingService {
+
+    public String hello() {
+        return "Hello!";
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    public String adminHello() {
+        return "Goodbye!";
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;But as of 0.10,  thanks to the amazing Andy Clement, proxies on classes can now be generated at build-time via the &lt;code&gt;@AotProxyHint&lt;/code&gt; annotation. Please notice the former &lt;code&gt;@ProxyHint&lt;/code&gt; has been renamed to &lt;code&gt;@JdkProxyHint&lt;/code&gt; to avoid confusion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;It allows to support security, transactions and a wide range of other proxy-based mechanisms on classes. Please notice we will refine auto-detection of such pattern to reduce the amount of explicit hints needed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="next-step-functional-configuration-aot-transformation"&gt;&lt;a class="anchor" href="#next-step-functional-configuration-aot-transformation"&gt;&lt;/a&gt;Next step : functional configuration AOT transformation&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Based on what we learnt in &lt;a href="https://github.com/spring-projects-experimental/spring-fu"&gt;Spring Fu&lt;/a&gt; and &lt;a href="https://github.com/spring-projects-experimental/spring-init"&gt;Spring Init&lt;/a&gt; experimental projects, our upcoming &lt;a href="https://github.com/spring-projects-experimental/spring-native"&gt;0.11 release&lt;/a&gt; will be focused on introducing functional configuration AOT transformation in order to reduce significantly the amount of reflection for Spring configuration infrastructure. The goal here is to transform Spring configuration in a way that could be understood out-of-the-box by the native image static analysis. This should both optimize the memory footprint and improve the native compatibility of Spring applications.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Redgate technical lead for the Flyway team Mikiel Agutu on database migrations and continuous delivery</title>
     <link rel="alternate" href="https://spring.io/blog/2021/06/10/a-bootiful-podcast-redgate-technical-lead-for-the-flyway-team-mikiel-agutu-on-database-migrations-and-continuous-delivery" />
@@ -673,93 +802,6 @@ Plus it includes upgrades to the latest dependencies, including recently release
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-aws"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.3.11 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/05/20/spring-boot-2-3-11-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2021-05-20:4449</id>
-    <updated>2021-05-20T16:00:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot 2.3.11 has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.3.11.RELEASE"&gt;52 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.3.11.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Web Services 3.1.1 is out!</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/05/20/spring-web-services-3-1-1-is-out" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Greg L. Turnquist</name>
-    </author>
-    <id>tag:spring.io,2021-05-20:4452</id>
-    <updated>2021-05-20T07:00:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Greetings Spring community,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The Spring Web Services team has released &lt;strong&gt;3.1.1&lt;/strong&gt;. This is the first major release under the new versioning schema. Releases will no longer have &lt;code&gt;.RELEASE&lt;/code&gt; and snapshots will only be &lt;code&gt;-SNAPSHOT&lt;/code&gt;, to better comply with community approaches.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;While we strive to maintain alignment with Spring Framework and Spring Security, we also test against Java 8, Java 11, and Java LATEST (JDK 16 as of today).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For more details, read the following release notes for each version:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="release-notes-spring-web-services-version-3-1-1"&gt;&lt;a class="anchor" href="#release-notes-spring-web-services-version-3-1-1"&gt;&lt;/a&gt;Release Notes - Spring Web Services - Version 3.1.1.&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;#1198 - Test against JDK 16 on CI.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;#1197 - Upgrade to Spring Framework 5.3.7.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;#1187 - Upgrade to Spring Security 5.5.0.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;#1199 - Don&amp;#8217;t skip main build targets during releases.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Links: &lt;a href="https://spring.io/projects/spring-ws/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-ws"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-ws/issues"&gt;Issues&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The artifacts are located on Maven Central. Get it while it&amp;#8217;s hot!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="springone-2021-is-coming"&gt;&lt;a class="anchor" href="#springone-2021-is-coming"&gt;&lt;/a&gt;SpringOne 2021 is coming&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The hottest Spring conference is right around the corner. Spring developers from around the globe will sign in. It&amp;#8217;s still not too late to &lt;a href="https://springone.io/register"&gt;register&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Batch 4.2.7 and 4.3.3 are out!</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/05/19/spring-batch-4-2-7-and-4-3-3-are-out" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mahmoud Ben Hassine</name>
-    </author>
-    <id>tag:spring.io,2021-05-19:4447</id>
-    <updated>2021-05-19T21:24:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who contributed, I am pleased to announce that Spring Batch 4.2.7 and 4.3.3 have been released and are available now from Maven Central repository. These patch releases come with a number of bug fixes, improvements and dependency updates. You can find the complete change logs here: &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/4.2.7.RELEASE"&gt;4.2.7&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/4.3.3"&gt;4.3.3&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I would like to thank all contributors who had a role in these releases!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-batch/docs/4.3.x/reference/pdf/spring-batch-reference.pdf"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
