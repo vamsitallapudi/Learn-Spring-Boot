@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Employee", schema = "employeedb")
 public class Employee {
-    private Long id;
+    private Integer id;
     private String firstname;
     private String lastname;
     private String email;
@@ -18,11 +18,11 @@ public class Employee {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
