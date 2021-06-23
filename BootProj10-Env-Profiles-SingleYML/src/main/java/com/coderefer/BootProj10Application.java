@@ -54,13 +54,12 @@ public class BootProj10Application {
 			desgs[i] = desg;
 		}
 //		get IOC Container
-//		SpringApplication appln = new SpringApplication();
-//		appln.setAdditionalProfiles("uat");
-		ApplicationContext ctx = SpringApplication.run(BootProj10Application.class, args);
+		SpringApplication appln = new SpringApplication(BootProj10Application.class);
+		appln.setAdditionalProfiles("uat");
+		ApplicationContext ctx = appln.run(args);
 		
 //		Trying to change env via code but not working.
-//		ConfigurableEnvironment env = (ConfigurableEnvironment)ctx.getEnvironment();
-//		env.setActiveProfiles("uat");
+		ConfigurableEnvironment env = (ConfigurableEnvironment)ctx.getEnvironment();
 		
 		MainController controller = ctx.getBean("controller", MainController.class);
 		try {
