@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: prod
+---  
+
+  
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: vamsitallapudi
+    password: Vamsi#4123
+    type: org.apache.commons.dbcp2.BasicDataSource
+    url: jdbc:postgresql://localhost:5432/employeeDb
+---
+
+
+spring:
+  profiles: uat
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: vamsitallapudi
+    password: Vamsi#4123
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    url: jdbc:postgresql://localhost:5432/employeeDb
+---
+
+
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: vamsitallapudi
+    password: Vamsi#4123
+    url: jdbc:postgresql://localhost:5432/employeeDb
