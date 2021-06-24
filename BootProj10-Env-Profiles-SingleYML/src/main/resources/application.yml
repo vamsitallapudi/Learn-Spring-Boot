@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: prod
+    active: test
 ---  
 
   
@@ -32,4 +32,17 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: vamsitallapudi
     password: Vamsi#4123
+    url: jdbc:postgresql://localhost:5432/employeeDb 
+    
+
+---
+
+
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: vamsitallapudi
+    password: Vamsi#4123
+    type: oracle.ucp.jdbc.PoolDataSource
     url: jdbc:postgresql://localhost:5432/employeeDb

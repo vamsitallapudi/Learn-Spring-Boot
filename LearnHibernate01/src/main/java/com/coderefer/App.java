@@ -31,9 +31,10 @@ public class App {
         Session session = sf.openSession();
 //        use this in case of saving the data to db
 //        Transaction tx = session.beginTransaction();
+        Employee vamsi;
         try {
 //            load object (ses.get())
-            Employee vamsi = session.load(Employee.class, 1);
+            vamsi = session.load(Employee.class, 1);
             System.out.println(vamsi.getDept().getName());
         } catch (ObjectNotFoundException e) {
             e.printStackTrace();
@@ -43,5 +44,9 @@ public class App {
 //        use these in case of saving the data to db
 //        session.save(sai);
 //        tx.commit();
+        session.close();
+        vamsi = null;
+        session = sf.openSession();
+        vamsi = session.get(Employee.class, 1);
     }
 }
