@@ -20,7 +20,7 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		CoronaVaccine savedVaccine=null;
 		  if(vaccine!=null)
 		    savedVaccine=coronaRepo.save(vaccine);
-		return savedVaccine!=null?"Vaccine registred/updated successfully with "+savedVaccine.getRegNo():" Vaccine registration/updation failed";
+		return savedVaccine!=null?"Vaccine registered/updated successfully with "+savedVaccine.getRegNo():" Vaccine registration/updation failed";
 	}
 
 }

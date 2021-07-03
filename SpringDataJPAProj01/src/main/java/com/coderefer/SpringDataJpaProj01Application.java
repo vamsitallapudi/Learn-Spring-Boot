@@ -1,5 +1,6 @@
 package com.coderefer;
 
+import com.coderefer.entity.CoronaVaccine;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -18,11 +19,12 @@ public class SpringDataJpaProj01Application {
 		ICoronaVaccineMgmtService  service=ctx.getBean("vaccineMgmtService", ICoronaVaccineMgmtService.class);
 		 //invoke methods
 		try {
-		   	//create Entity class obj
-			//CoronaVaccine vaccine=new CoronaVaccine(null,"covaxin","Bharat-BioTech","india",234.0,3);
-//			CoronaVaccine vaccine=new CoronaVaccine("covaxin","Bharat-BioTech","india",234.0,3);
-			//call b.method
-//			System.out.println(service.registerVaccine(vaccine));
+//		   	create Entity class obj
+			CoronaVaccine vaccine=
+					new CoronaVaccine("covaxin",
+							"Bharat Biotech", "India",
+							749.0, 2);
+			System.out.println(service.registerVaccine(vaccine));
 		}
 		catch(DataAccessException dae) {
 			dae.printStackTrace();
