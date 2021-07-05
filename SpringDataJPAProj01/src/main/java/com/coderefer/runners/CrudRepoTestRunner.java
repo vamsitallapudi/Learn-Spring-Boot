@@ -4,8 +4,9 @@ import com.coderefer.entity.CoronaVaccine;
 import com.coderefer.service.ICoronaVaccineMgmtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public class CrudRepoTestRunner implements CommandLineRunner {
@@ -15,12 +16,17 @@ public class CrudRepoTestRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
         try {
-            CoronaVaccine vaccine = new CoronaVaccine(
-                    "Covishield", "Serum", "India", 500.2, 2);
-            System.out.println(service.registerVaccine(vaccine));
-        } catch (DataAccessException e) {
-            e.printStackTrace();
+            //        Bulk Insertion / Batch Insertion
+            List<CoronaVaccine> list = service.registerInBatch(List.of(
+                    new CoronaVaccine("Sputnik", "Russie", "Russia", 567.0, 2),
+                    new CoronaVaccine("pfizer", "pfizer", "USA", 1400.0, 2),
+                    new CoronaVaccine("moderena", "Moderena", "USA", 455.5, 2)
+            ));
+
+            System.out.println(list.size());
+            list.forEach(v -> System.out.println(v.getRegNo()));
         } catch (Exception e) {
             e.printStackTrace();
         }
