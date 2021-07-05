@@ -1,12 +1,10 @@
 package com.coderefer.runners;
 
-import com.coderefer.entity.CoronaVaccine;
 import com.coderefer.service.ICoronaVaccineMgmtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class CrudRepoTestRunner implements CommandLineRunner {
@@ -18,15 +16,10 @@ public class CrudRepoTestRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         try {
-            //        Bulk Insertion / Batch Insertion
-            List<CoronaVaccine> list = service.registerInBatch(List.of(
-                    new CoronaVaccine("Sputnik", "Russie", "Russia", 567.0, 2),
-                    new CoronaVaccine("pfizer", "pfizer", "USA", 1400.0, 2),
-                    new CoronaVaccine("moderena", "Moderena", "USA", 455.5, 2)
-            ));
-
-            System.out.println(list.size());
-            list.forEach(v -> System.out.println(v.getRegNo()));
+            System.out.println("Total records count: " + service.getVaccinesCount());
+            System.out.println("5 Vaccine available? " + service.checkVaccineAvailability(5));
+        } catch (DataAccessException e) {
+            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
