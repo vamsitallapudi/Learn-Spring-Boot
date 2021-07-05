@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.coderefer.entity.CoronaVaccine;
 import com.coderefer.repo.ICoronaVaccineRepo;
 
+import java.util.List;
+
 
 @Service("vaccineMgmtService")
 public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
@@ -21,6 +23,24 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		  if(vaccine!=null)
 		    savedVaccine=coronaRepo.save(vaccine);
 		return savedVaccine!=null?"Vaccine registered/updated successfully with "+savedVaccine.getRegNo():" Vaccine registration/updation failed";
+	}
+
+	@Override
+	public List<CoronaVaccine> registerInBatch(List<CoronaVaccine> vaccines) {
+		if(vaccines != null)
+			return (List<CoronaVaccine>) coronaRepo.saveAll(vaccines);
+		else
+			throw new IllegalArgumentException("Passed vaccines are null");
+	}
+
+	@Override
+	public long getVaccinesCount() {
+		return coronaRepo.count();
+	}
+
+	@Override
+	public boolean checkVaccineAvailability(long regNo) {
+		return coronaRepo.existsById(regNo);
 	}
 
 }
