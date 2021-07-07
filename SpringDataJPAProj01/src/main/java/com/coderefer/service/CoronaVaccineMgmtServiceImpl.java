@@ -7,6 +7,7 @@ import com.coderefer.entity.CoronaVaccine;
 import com.coderefer.repo.ICoronaVaccineRepo;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service("vaccineMgmtService")
@@ -51,6 +52,11 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public List<CoronaVaccine> fetchAllDetailsById(List<Long> ids) {
 		return (List<CoronaVaccine>) coronaRepo.findAllById(ids);
+	}
+
+	@Override
+	public Optional<CoronaVaccine> fetchById(Long id) {
+		return coronaRepo.findById(id);
 	}
 
 }

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class CrudRepoTestRunner implements CommandLineRunner {
@@ -29,6 +30,17 @@ public class CrudRepoTestRunner implements CommandLineRunner {
             System.out.println();
             System.out.println("===================findAllByIds()===================");
             service.fetchAllDetailsById(Arrays.asList(3L, 4L, 5L)).forEach(System.out::println);
+            System.out.println("====================================================");
+            System.out.println();
+            System.out.println("===================findById()===================");
+            List<Long> myIds = List.of(7L, 14L);
+            myIds.forEach(
+                    id -> {
+                        Optional<CoronaVaccine> optional = service.fetchById(id);
+                        optional.ifPresent(System.out::println);
+                        optional.orElseThrow(() -> new IllegalArgumentException("Record Not found"));
+                    }
+            );
             System.out.println("====================================================");
 
         } catch (DataAccessException e) {
