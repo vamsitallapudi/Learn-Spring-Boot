@@ -43,4 +43,14 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		return coronaRepo.existsById(regNo);
 	}
 
+	@Override
+	public List<CoronaVaccine> fetchAllDetails() {
+		return (List<CoronaVaccine>) coronaRepo.findAll();
+	}
+
+	@Override
+	public List<CoronaVaccine> fetchAllDetailsById(List<Long> ids) {
+		return (List<CoronaVaccine>) coronaRepo.findAllById(ids);
+	}
+
 }

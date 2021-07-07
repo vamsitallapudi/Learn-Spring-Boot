@@ -8,5 +8,7 @@ public interface ICoronaVaccineMgmtService {
 	String registerVaccine(CoronaVaccine vaccine);
 	List<CoronaVaccine> registerInBatch(List<CoronaVaccine> vaccines);
 	long getVaccinesCount();
-	public boolean checkVaccineAvailability(long regNo);
+	boolean checkVaccineAvailability(long regNo);
+	List<CoronaVaccine> fetchAllDetails();
+	List<CoronaVaccine> fetchAllDetailsById(List<Long> ids);
 }
