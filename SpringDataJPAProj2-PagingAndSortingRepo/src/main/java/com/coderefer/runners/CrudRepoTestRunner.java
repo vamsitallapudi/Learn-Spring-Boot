@@ -21,7 +21,9 @@ public class CrudRepoTestRunner implements CommandLineRunner {
 
         try {
 //            fetching Details in ascending order based on a property
-          service.fetchDetails(true, "price");
+//          service.fetchDetails(true, "price");
+//          Fetching details with Page Number and page size
+            service.fetchDetailsByPage(0, 2, true, "price" ).forEach(System.out::println);
         } catch (DataAccessException e) {
             e.printStackTrace();
         }
