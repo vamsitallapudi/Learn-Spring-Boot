@@ -33,7 +33,7 @@ public class CrudRepoTestRunner implements CommandLineRunner {
             System.out.println("====================================================");
             System.out.println();
             System.out.println("===================findById()===================");
-            List<Long> myIds = List.of(7L, 14L);
+            List<Long> myIds = List.of(2L,3L);
             myIds.forEach(
                     id -> {
                         Optional<CoronaVaccine> optional = service.fetchById(id);
@@ -41,6 +41,9 @@ public class CrudRepoTestRunner implements CommandLineRunner {
                         optional.orElseThrow(() -> new IllegalArgumentException("Record Not found"));
                     }
             );
+            System.out.println("====================================================");
+            System.out.println("===================deleteById()===================");
+            System.out.println(service.removeVaccineById(8L));
             System.out.println("====================================================");
 
         } catch (DataAccessException e) {

@@ -13,4 +13,5 @@ public interface ICoronaVaccineMgmtService {
 	List<CoronaVaccine> fetchAllDetails();
 	List<CoronaVaccine> fetchAllDetailsById(List<Long> ids);
 	Optional<CoronaVaccine> fetchById(Long id);
+	String removeVaccineById(Long id);
 }
