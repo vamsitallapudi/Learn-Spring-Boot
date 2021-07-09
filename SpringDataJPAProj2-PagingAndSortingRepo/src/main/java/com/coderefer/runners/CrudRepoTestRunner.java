@@ -9,8 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CrudRepoTestRunner implements CommandLineRunner {
 
+    private final ICoronaVaccineMgmtService service;
+
     @Autowired
-    private ICoronaVaccineMgmtService service;
+    public CrudRepoTestRunner(ICoronaVaccineMgmtService service) {
+        this.service = service;
+    }
 
     @Override
     public void run(String... args) throws Exception {
