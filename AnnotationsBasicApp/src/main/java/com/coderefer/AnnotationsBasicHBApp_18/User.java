@@ -1,4 +1,4 @@
-package com.coderefer.AnnotationsBasicApp;
+package com.coderefer.AnnotationsBasicHBApp_18;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
