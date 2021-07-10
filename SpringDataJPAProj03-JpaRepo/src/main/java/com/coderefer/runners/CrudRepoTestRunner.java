@@ -20,7 +20,9 @@ public class CrudRepoTestRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         try {
-            CoronaVaccine vaccine = new CoronaVaccine("covaxin","Bharat Biotech","India",749.0,2);
+            CoronaVaccine vaccine = new CoronaVaccine();
+            vaccine.setName("pfizer");
+//            CoronaVaccine vaccine = new CoronaVaccine("covaxin","Bharat Biotech","India",749.0,2);
             service.searchVaccinesByGivenData(vaccine, true, "price").forEach(System.out::println);
         }catch (DataAccessException e) {
             e.printStackTrace();
