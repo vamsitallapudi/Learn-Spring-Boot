@@ -14,7 +14,12 @@ public class SaveObjectDemo {
         Transaction tx = null;
         try (factory; ses) {
             tx = ses.beginTransaction();
-            Artist artist = new Artist(1235, "Vamsi", "Hyderabad", 98984567L, "Hero");
+
+//            Artist artist = new Artist(1235, "Vamsi", "Hyderabad", 98984567L, "Hero");
+            Artist artist = new Artist();
+            artist.setAid(1238);
+            artist.setName("Shiva");
+            artist.setCategory("God");
             Integer idval = (Integer) ses.save(artist);
             System.out.println("Generated ID Value: " + idval);
             tx.commit();

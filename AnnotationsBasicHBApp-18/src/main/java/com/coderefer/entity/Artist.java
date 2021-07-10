@@ -3,6 +3,9 @@ package com.coderefer.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +18,9 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//@DynamicInsert()
+@Proxy(lazy = true)
 public class Artist implements Serializable {
-
     @Id
     @Column
     private Integer aid;
