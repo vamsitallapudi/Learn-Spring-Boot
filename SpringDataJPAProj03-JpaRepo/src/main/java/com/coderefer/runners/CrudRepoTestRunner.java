@@ -1,6 +1,5 @@
 package com.coderefer.runners;
 
-import com.coderefer.entity.CoronaVaccine;
 import com.coderefer.service.ICoronaVaccineMgmtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -20,10 +19,11 @@ public class CrudRepoTestRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         try {
-            CoronaVaccine vaccine = new CoronaVaccine();
-            vaccine.setName("pfizer");
+//            CoronaVaccine vaccine = new CoronaVaccine();
+//            vaccine.setName("pfizer");
 //            CoronaVaccine vaccine = new CoronaVaccine("covaxin","Bharat Biotech","India",749.0,2);
-            service.searchVaccinesByGivenData(vaccine, true, "price").forEach(System.out::println);
+//            service.searchVaccinesByGivenData(vaccine, true, "price").forEach(System.out::println);
+            System.out.println(service.getVaccineByRegNo(5L));
         }catch (DataAccessException e) {
             e.printStackTrace();
         }

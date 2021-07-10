@@ -8,8 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringDataProjApp03_JPARepo {
 
+    final ICoronaVaccineMgmtService service;
+
     @Autowired
-    ICoronaVaccineMgmtService service;
+    public SpringDataProjApp03_JPARepo(ICoronaVaccineMgmtService service) {
+        this.service = service;
+    }
 
     public static void main(String[] args) {
         //get Access to IOC container

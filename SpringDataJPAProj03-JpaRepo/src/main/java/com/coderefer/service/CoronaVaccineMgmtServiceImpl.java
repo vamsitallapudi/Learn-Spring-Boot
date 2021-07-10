@@ -27,4 +27,9 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		Sort sort = Sort.by(asc? Sort.Direction.ASC : Sort.Direction.DESC, properties);
 		return coronaRepo.findAll(coronaVaccineExample, sort);
 	}
+
+	@Override
+	public CoronaVaccine getVaccineByRegNo(Long regId) {
+		return coronaRepo.getById(regId);
+	}
 }
