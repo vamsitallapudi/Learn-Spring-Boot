@@ -13,4 +13,7 @@ public interface ICoronaVaccineMgmtService {
     List<CoronaVaccine> fetchVaccinesByCompany(String company);
     List<CoronaVaccine> fetchVaccinesByCompanyEquals(String company);
     List<CoronaVaccine> fetchVaccineByPriceRange(Double start, Double end);
+    List<CoronaVaccine> findVaccinesByNameStartsWith(String startLetters);
+    List<CoronaVaccine> findVaccinesByNameEndingWith(String endingLetters);
+    List<CoronaVaccine> fetchVaccinesByNameContaining(String letters);
 }

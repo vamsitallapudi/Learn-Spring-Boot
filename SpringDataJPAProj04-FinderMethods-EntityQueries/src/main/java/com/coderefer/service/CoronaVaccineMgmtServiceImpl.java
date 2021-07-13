@@ -57,4 +57,19 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public List<CoronaVaccine> fetchVaccineByPriceRange(Double start, Double end) {
 		return coronaRepo.findByPriceBetween(start, end);
 	}
+
+	@Override
+	public List<CoronaVaccine> findVaccinesByNameStartsWith(String startLetters) {
+		return coronaRepo.findByNameStartingWith(startLetters);
+	}
+
+	@Override
+	public List<CoronaVaccine> findVaccinesByNameEndingWith(String endingLetters) {
+		return coronaRepo.findByNameEndingWith(endingLetters);
+	}
+
+	@Override
+	public List<CoronaVaccine> fetchVaccinesByNameContaining(String letters) {
+		return coronaRepo.findByNameContaining(letters);
+	}
 }
