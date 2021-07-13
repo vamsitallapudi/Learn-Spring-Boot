@@ -28,6 +28,12 @@ public class CrudRepoTestRunner implements CommandLineRunner {
             service.findVaccinesByNameEndingWith("na").forEach(System.out::println);
             System.out.println("############### containing ######################");
             service.fetchVaccinesByNameContaining("e").forEach(System.out::println);
+            System.out.println("############### Countries in ######################");
+            service.fetchVaccinesByCountries("India", "Russia").forEach(System.out::println);
+            System.out.println("############### Countries not in ######################");
+            service.fetchVaccinesByCountriesNotIn("India", "Russia").forEach(System.out::println);
+            System.out.println("############### order by price asc ######################");
+            service.findPriceGreaterThanOrderByPriceAsc(500.0).forEach(System.out::println);
         }catch (DataAccessException e) {
             e.printStackTrace();
         }

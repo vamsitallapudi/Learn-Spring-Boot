@@ -72,4 +72,20 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public List<CoronaVaccine> fetchVaccinesByNameContaining(String letters) {
 		return coronaRepo.findByNameContaining(letters);
 	}
+
+	@Override
+	public List<CoronaVaccine> fetchVaccinesByCountries(String... countries) {
+		List<String> myCon = List.of(countries);
+		return coronaRepo.findByCountryIn(myCon);
+	}
+
+	@Override
+	public List<CoronaVaccine> fetchVaccinesByCountriesNotIn(String... countries) {
+		return coronaRepo.findByCountryNotIn(List.of(countries));
+	}
+
+	@Override
+	public List<CoronaVaccine> findPriceGreaterThanOrderByPriceAsc(Double price) {
+		return coronaRepo.findByPriceGreaterThanOrderByPriceAsc(price);
+	}
 }
