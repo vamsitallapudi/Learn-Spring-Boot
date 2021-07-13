@@ -12,4 +12,5 @@ public interface ICoronaVaccineMgmtService {
 
     List<CoronaVaccine> fetchVaccinesByCompany(String company);
     List<CoronaVaccine> fetchVaccinesByCompanyEquals(String company);
+    List<CoronaVaccine> fetchVaccineByPriceRange(Double start, Double end);
 }

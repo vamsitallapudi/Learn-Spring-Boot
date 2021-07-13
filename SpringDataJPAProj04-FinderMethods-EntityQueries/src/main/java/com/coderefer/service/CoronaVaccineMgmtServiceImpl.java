@@ -52,4 +52,9 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public List<CoronaVaccine> fetchVaccinesByCompanyEquals(String company) {
 		return coronaRepo.findByCompanyEquals(company);
 	}
+
+	@Override
+	public List<CoronaVaccine> fetchVaccineByPriceRange(Double start, Double end) {
+		return coronaRepo.findByPriceBetween(start, end);
+	}
 }

@@ -12,5 +12,6 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
 //    REQUIRED_DOSE_COUNT FROM CORONA_VACCINE WHERE COMPANY = ?;
     List<CoronaVaccine> findByCompany(String company);
     List<CoronaVaccine> findByCompanyEquals(String company);
-
+//    List<CoronaVaccine> findByPriceLessThan()
+    List<CoronaVaccine> findByPriceBetween(Double start, Double end);
 }
