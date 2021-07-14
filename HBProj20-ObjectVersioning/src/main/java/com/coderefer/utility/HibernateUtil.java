@@ -16,7 +16,6 @@ public class HibernateUtil {
 			   StandardServiceRegistryBuilder builder=new StandardServiceRegistryBuilder();
 			   StandardServiceRegistry registry=builder.configure("com/coderefer/cfgs/hibernate.cfg.xml").build();
 			   //create SessionFactory
-			   factory=cfg.buildSessionFactory(registry);
 			//build SessionFactory using registry
 			factory=cfg.buildSessionFactory(registry);
 		} catch (HibernateException e) {
