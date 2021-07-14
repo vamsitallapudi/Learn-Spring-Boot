@@ -12,13 +12,11 @@ public class HibernateUtil {
 	private static SessionFactory factory;
 	static {
 		try {
-			Configuration cfg = new Configuration();
-			cfg.configure("com/coderefer/cfgs/hibernate.cfg.xml").buildSessionFactory();;
-			cfg.addResource("com.coderefer.entity.MobileUser.hbm.xml");
-			//create ServiceRegistryBuilder
-			StandardServiceRegistryBuilder builder=new StandardServiceRegistryBuilder();
-			//create Service registry
-			StandardServiceRegistry registry=builder.applySettings(cfg.getProperties()).build();
+			  Configuration cfg=new Configuration();
+			   StandardServiceRegistryBuilder builder=new StandardServiceRegistryBuilder();
+			   StandardServiceRegistry registry=builder.configure("com/coderefer/cfgs/hibernate.cfg.xml").build();
+			   //create SessionFactory
+			   factory=cfg.buildSessionFactory(registry);
 			//build SessionFactory using registry
 			factory=cfg.buildSessionFactory(registry);
 		} catch (HibernateException e) {
