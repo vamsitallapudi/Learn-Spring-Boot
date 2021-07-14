@@ -18,9 +18,9 @@ public class ObjectVersioningUpdateTest {
 
             tx =sess.beginTransaction();
 //            load object
-            MobilePhoneUser user = sess.get(MobilePhoneUser.class, 1);
+            MobilePhoneUser user = sess.get(MobilePhoneUser.class, 9L);
             if(user != null) {
-                user.setCircle("AP");
+                user.setCircle("Telangana");
                 sess.update(user);
                 tx.commit();
                 System.out.println("Object updated for " + user.getUpdationsCount() + " times");
