@@ -22,5 +22,14 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     List<CoronaVaccine> findByNameContaining(String letters);
     List<CoronaVaccine> findByCountryIn(List<String> countries);
     List<CoronaVaccine> findByCountryNotIn(List<String> countries);
+    //    SELECT REGNO, NAME, COMPANY, PRICE, COUNTRY, REQUIRED_DOSE_COUNT FROM CORONA_VACCINE WHERE PRICE > ? ORDER BY PRICE ASC;
+
     List<CoronaVaccine> findByPriceGreaterThanOrderByPriceAsc(Double price);
+
+//    ################### Multiple Properties based conditions ###########################
+    List<CoronaVaccine> findByNameAndCountry(String name, String country);
+
+    //    SELECT REGNO, NAME, COMPANY, PRICE, COUNTRY, REQUIRED_DOSE_COUNT FROM CORONA_VACCINE WHERE NAME LIKE "p%" AND PRICE BETWEEN ? AND ?;
+    List<CoronaVaccine> findByNameLikeOrPriceBetween(String name, Double priceStart, Double priceEnd);
+    List<CoronaVaccine> findByCountryInAndNameInOrPriceGreaterThanEqual(List<String> countries, List<String> name, Double price);
 }

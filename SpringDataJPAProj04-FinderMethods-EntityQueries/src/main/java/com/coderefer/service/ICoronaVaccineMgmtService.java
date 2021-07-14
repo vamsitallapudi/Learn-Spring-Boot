@@ -18,6 +18,7 @@ public interface ICoronaVaccineMgmtService {
     List<CoronaVaccine> fetchVaccinesByNameContaining(String letters);
     List<CoronaVaccine> fetchVaccinesByCountries(String... country);
     List<CoronaVaccine> fetchVaccinesByCountriesNotIn(String... country);
-    //    SELECT REGNO, NAME, COMPANY, PRICE, COUNTRY, REQUIRED_DOSE_COUNT FROM CORONA_VACCINE WHERE PRICE > ? ORDER BY PRICE ASC;
     List<CoronaVaccine> findPriceGreaterThanOrderByPriceAsc(Double price);
+    List<CoronaVaccine> searchVaccinesByNameAndCountry(String name, String country);
+    List<CoronaVaccine> searchVaccineByNameLikeOrPriceBetween(String nameLike, Double priceStart, Double priceEnd);
 }

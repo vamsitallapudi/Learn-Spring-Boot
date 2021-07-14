@@ -88,4 +88,14 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public List<CoronaVaccine> findPriceGreaterThanOrderByPriceAsc(Double price) {
 		return coronaRepo.findByPriceGreaterThanOrderByPriceAsc(price);
 	}
+
+	@Override
+	public List<CoronaVaccine> searchVaccinesByNameAndCountry(String name, String country) {
+		return coronaRepo.findByNameAndCountry(name, country);
+	}
+
+	@Override
+	public List<CoronaVaccine> searchVaccineByNameLikeOrPriceBetween(String nameLike, Double priceStart, Double priceEnd) {
+		return coronaRepo.findByNameLikeOrPriceBetween(nameLike, priceStart, priceEnd);
+	}
 }
