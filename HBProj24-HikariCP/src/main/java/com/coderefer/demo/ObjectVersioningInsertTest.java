@@ -15,9 +15,8 @@ public class ObjectVersioningInsertTest {
         Session sess = HibernateUtil.getSession();
         Transaction tx= null;
         try(factory;sess) {
-
             tx =sess.beginTransaction();
-            MobilePhoneUser user = new MobilePhoneUser(8686670475L, true, "UP", "Hello Honey Bunny");
+            MobilePhoneUser user = new MobilePhoneUser(8686670475L, true, "UP", "Jai BOLO");
             sess.save(user);
             tx.commit();
             System.out.println("Object is saved");

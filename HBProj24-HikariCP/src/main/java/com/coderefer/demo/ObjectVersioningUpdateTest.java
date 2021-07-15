@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-public class ObjectVersioningInsertTest {
+public class ObjectVersioningUpdateTest {
     public static void main(String[] args) {
 //        create SessionFactory, Session objs
 
@@ -17,10 +17,16 @@ public class ObjectVersioningInsertTest {
         try(factory;sess) {
 
             tx =sess.beginTransaction();
-            MobilePhoneUser user = new MobilePhoneUser(8686670475L, true, "UP", "Hello Honey Bunny");
-            sess.save(user);
-            tx.commit();
-            System.out.println("Object is saved");
+//            load object
+            MobilePhoneUser user = sess.load(MobilePhoneUser.class, 9L);
+            if(user != null) {
+                user.setCircle("AP");
+                sess.update(user);
+                tx.commit();
+                System.out.println("Object updated for " + user.getUpdationsCount() + " times");
+            } else {
+                System.out.println("Object Not found for updation");
+            }
         } catch (HibernateException e) {
             if(tx != null && (tx.getStatus()!=null || tx.getRollbackOnly()))
                 tx.rollback();

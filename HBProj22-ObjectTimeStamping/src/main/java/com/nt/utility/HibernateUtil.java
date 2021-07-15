@@ -13,7 +13,7 @@ public class HibernateUtil {
 	   //Modren Bootstrapping code
 	   Configuration cfg=new Configuration();
 	   StandardServiceRegistryBuilder builder=new StandardServiceRegistryBuilder();
-	   StandardServiceRegistry registry=builder.configure("/Users/vamsitallapudi/Proj/springboot/Learn-Spring-Boot/HBProj22-ObjectTimeStamping/src/main/java/com/nt/cfgs/hibernate.cfg.xml").build();
+	   StandardServiceRegistry registry=builder.configure("com/nt/cfgs/hibernate.cfg.xml").build();
 	   //create SessionFactory
 	   factory=cfg.buildSessionFactory(registry);
 	   }//try

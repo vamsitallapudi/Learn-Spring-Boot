@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.coderefer.entity.MobilePhoneUser">
+        <id name="regId">
+            <generator class="increment"/>
+        </id>
+        <property name="updationsCount" type="java.lang.Integer"/>
+        <property name="mobileNo" type="java.lang.Long"/>
+        <property name="prepaid" type="boolean"/>
+        <property name="circle" type="java.lang.String" length="20"/>
+        <property name="callerTune" type="java.lang.String" length="20"/>
+    </class>
+</hibernate-mapping>
