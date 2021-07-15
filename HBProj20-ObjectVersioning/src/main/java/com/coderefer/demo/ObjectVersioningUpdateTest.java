@@ -15,7 +15,6 @@ public class ObjectVersioningUpdateTest {
         Session sess = HibernateUtil.getSession();
         Transaction tx= null;
         try(factory;sess) {
-
             tx =sess.beginTransaction();
 //            load object
             MobilePhoneUser user = sess.get(MobilePhoneUser.class, 9L);
