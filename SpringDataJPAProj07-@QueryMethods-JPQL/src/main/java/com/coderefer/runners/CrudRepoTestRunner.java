@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Component
 public class CrudRepoTestRunner implements CommandLineRunner {
 
@@ -22,6 +24,10 @@ public class CrudRepoTestRunner implements CommandLineRunner {
             service.fetchVaccinesByCompany("Russie").forEach(System.out::println);
             System.out.println("################# finding vaccines by price range ###########################");
             service.fetchVaccinesByPriceRange(700.0, 1500.0).forEach(System.out::println);
+            System.out.println("################# finding vaccines by companies ###########################");
+            service.fetchVaccinesByCompanies("Russie", "Moderena", "pfizer").forEach(System.out::println);
+            System.out.println("################# finding vaccines data by name ###########################");
+            service.fetchVaccinesDataByNames("covaxin", "Sputnik").forEach(it -> Arrays.stream(it).forEach(System.out::println));
         } catch (DataAccessException e) {
             e.printStackTrace();
         }

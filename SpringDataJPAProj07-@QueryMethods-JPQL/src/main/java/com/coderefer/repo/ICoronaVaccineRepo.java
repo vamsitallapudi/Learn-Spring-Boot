@@ -21,4 +21,12 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     List<CoronaVaccine> searchVaccinesByCompany(@Param("comp") String vendor);
     @Query("FROM CoronaVaccine WHERE price >=:min and price <=:max")//-> works
     List<CoronaVaccine> searchVaccinesByPriceRange(double min, double max);
+    @Query("FROM CoronaVaccine WHERE price >=?2 and price <=?1")//-> works
+    List<CoronaVaccine> searchVaccinesByPriceRangeByNumberedParam(double min, double max);
+    @Query("FROM CoronaVaccine WHERE company IN (:comp1, :comp2, :comp3) ORDER BY company")
+    List<CoronaVaccine> searchVaccinesByCompanies(String comp1, String comp2, String comp3);
+
+
+    @Query("select name, company, price FROM CoronaVaccine WHERE name IN (:name1, :name2) ORDER BY company")
+    List<Object[]> searchVaccinesByNames(String name1, String name2);
 }
