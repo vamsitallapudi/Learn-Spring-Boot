@@ -23,4 +23,9 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public List<CoronaVaccine> fetchVaccinesByCompany(String vendor) {
 		return coronaRepo.searchVaccinesByCompany(vendor);
 	}
+
+	@Override
+	public List<CoronaVaccine> fetchVaccinesByPriceRange(Double minPrice, Double maxPrice) {
+		return coronaRepo.searchVaccinesByPriceRange(minPrice, maxPrice);
+	}
 }

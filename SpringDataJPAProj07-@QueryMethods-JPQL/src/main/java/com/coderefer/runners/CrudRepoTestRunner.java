@@ -20,6 +20,8 @@ public class CrudRepoTestRunner implements CommandLineRunner {
     public void run(String... args) {
         try {
             service.fetchVaccinesByCompany("Russie").forEach(System.out::println);
+            System.out.println("################# finding vaccines by price range ###########################");
+            service.fetchVaccinesByPriceRange(700.0, 1500.0).forEach(System.out::println);
         } catch (DataAccessException e) {
             e.printStackTrace();
         }

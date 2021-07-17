@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface ICoronaVaccineMgmtService {
     List<CoronaVaccine> fetchVaccinesByCompany(String vendor);
+    List<CoronaVaccine> fetchVaccinesByPriceRange(Double minPrice, Double maxPrice);
 
 }
