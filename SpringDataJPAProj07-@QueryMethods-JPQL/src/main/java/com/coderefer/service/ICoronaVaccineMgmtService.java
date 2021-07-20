@@ -12,5 +12,6 @@ public interface ICoronaVaccineMgmtService {
 
     List<Object[]> fetchVaccinesDataByNames(String name1, String name2);
     Optional<CoronaVaccine> fetchVaccineByName(String name);
+    Object fetchVaccineDataByName(String name);
 
 }

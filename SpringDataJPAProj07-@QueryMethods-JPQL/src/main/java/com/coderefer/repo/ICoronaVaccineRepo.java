@@ -37,4 +37,7 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
 //    Entity Query giving single row
     @Query("FROM CoronaVaccine WHERE name=:name")
     Optional<CoronaVaccine> searchVaccineByName(String name);
+
+    @Query("SELECT name, company, country FROM CoronaVaccine where name=:name")
+    Object searchVaccineDataByName(String name);
 }

@@ -45,4 +45,9 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public Optional<CoronaVaccine> fetchVaccineByName(String name) {
 		return coronaRepo.searchVaccineByName(name);
 	}
+
+	@Override
+	public Object fetchVaccineDataByName(String name) {
+		return coronaRepo.searchVaccineDataByName(name);
+	}
 }
