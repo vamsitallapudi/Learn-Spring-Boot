@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service("vaccineMgmtService")
@@ -38,5 +39,10 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public List<Object[]> fetchVaccinesDataByNames(String name1, String name2) {
 		return coronaRepo.searchVaccinesByNames(name1, name2);
+	}
+
+	@Override
+	public Optional<CoronaVaccine> fetchVaccineByName(String name) {
+		return coronaRepo.searchVaccineByName(name);
 	}
 }

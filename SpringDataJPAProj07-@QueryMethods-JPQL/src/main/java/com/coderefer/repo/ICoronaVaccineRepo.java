@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 
 public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
@@ -17,6 +18,8 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     * @Query("FROM CoronaVaccine WHERE company=:vendor") //-> works
      List<CoronaVaccine> searchVaccinesByCompany(String vendor);
     * */
+
+//   =================== SELECT QUERIES PERFORMING BULK OPERATIONS =============================
     @Query("FROM CoronaVaccine WHERE company=:comp")//-> works
     List<CoronaVaccine> searchVaccinesByCompany(@Param("comp") String vendor);
     @Query("FROM CoronaVaccine WHERE price >=:min and price <=:max")//-> works
@@ -29,4 +32,9 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
 
     @Query("select name, company, price FROM CoronaVaccine WHERE name IN (:name1, :name2) ORDER BY company")
     List<Object[]> searchVaccinesByNames(String name1, String name2);
+
+//   =================== SELECT QUERIES PERFORMING SINGLE ROW OPERATIONS =============================
+//    Entity Query giving single row
+    @Query("FROM CoronaVaccine WHERE name=:name")
+    Optional<CoronaVaccine> searchVaccineByName(String name);
 }
