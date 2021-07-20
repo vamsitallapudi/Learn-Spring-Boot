@@ -39,6 +39,8 @@ public class CrudRepoTestRunner implements CommandLineRunner {
             System.out.println("################# fetch vaccine data by name ###########################");
             Object obj = service.fetchVaccineDataByName("Sputnik");
             Arrays.stream((Object[]) obj).forEach(System.out::println);
+            System.out.println("################# fetch vaccine by country name ###########################");
+            System.out.println(service.fetchVaccineByCountryName("Russia"));
         } catch (DataAccessException e) {
             e.printStackTrace();
         }

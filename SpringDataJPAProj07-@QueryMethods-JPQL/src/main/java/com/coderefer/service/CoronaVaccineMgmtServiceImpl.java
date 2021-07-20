@@ -50,4 +50,9 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public Object fetchVaccineDataByName(String name) {
 		return coronaRepo.searchVaccineDataByName(name);
 	}
+
+	@Override
+	public String fetchVaccineByCountryName(String country) {
+		return coronaRepo.searchVaccineByCountryName(country);
+	}
 }

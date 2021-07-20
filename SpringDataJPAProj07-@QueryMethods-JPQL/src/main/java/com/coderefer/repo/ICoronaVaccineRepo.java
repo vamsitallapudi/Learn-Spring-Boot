@@ -38,6 +38,12 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     @Query("FROM CoronaVaccine WHERE name=:name")
     Optional<CoronaVaccine> searchVaccineByName(String name);
 
+//    scalar query giving multiple row values
     @Query("SELECT name, company, country FROM CoronaVaccine where name=:name")
     Object searchVaccineDataByName(String name);
+
+    //    Scalar Query giving specific single col value
+    @Query("select name from CoronaVaccine where country=:country")
+    String searchVaccineByCountryName(String country);
+
 }
