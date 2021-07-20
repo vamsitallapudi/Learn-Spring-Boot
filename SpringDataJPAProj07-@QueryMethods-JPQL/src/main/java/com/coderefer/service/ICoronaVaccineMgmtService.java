@@ -14,5 +14,7 @@ public interface ICoronaVaccineMgmtService {
     Optional<CoronaVaccine> fetchVaccineByName(String name);
     Object fetchVaccineDataByName(String name);
     String fetchVaccineByCountryName(String country);
+    Long fetchVaccinesCount();
+    Object getVaccinesAggregate(Double minPrice, Double maxPrice);
 
 }

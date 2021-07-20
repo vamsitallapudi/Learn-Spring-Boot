@@ -46,4 +46,12 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     @Query("select name from CoronaVaccine where country=:country")
     String searchVaccineByCountryName(String country);
 
+    /**
+     * Aggregate Functions
+     * */
+    @Query("select count(*) from CoronaVaccine")
+    long getVaccinesCount();
+    @Query("select count(*), MIN(price), MAX(price) from CoronaVaccine where price BETWEEN :minPrice and :maxPrice")
+    Object getVaccinesAggregateByPriceRange(Double minPrice, Double maxPrice);
+
 }

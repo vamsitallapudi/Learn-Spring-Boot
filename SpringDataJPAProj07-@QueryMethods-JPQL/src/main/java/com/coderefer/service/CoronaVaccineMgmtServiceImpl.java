@@ -55,4 +55,14 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	public String fetchVaccineByCountryName(String country) {
 		return coronaRepo.searchVaccineByCountryName(country);
 	}
+
+	@Override
+	public Long fetchVaccinesCount() {
+		return coronaRepo.getVaccinesCount();
+	}
+
+	@Override
+	public Object getVaccinesAggregate(Double minPrice, Double maxPrice) {
+		return coronaRepo.getVaccinesAggregateByPriceRange(minPrice,maxPrice);
+	}
 }
