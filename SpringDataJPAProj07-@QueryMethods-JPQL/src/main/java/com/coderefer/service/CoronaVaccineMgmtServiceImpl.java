@@ -5,6 +5,7 @@ import com.coderefer.repo.ICoronaVaccineRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,5 +65,21 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public Object getVaccinesAggregate(Double minPrice, Double maxPrice) {
 		return coronaRepo.getVaccinesAggregateByPriceRange(minPrice,maxPrice);
+	}
+
+	@Override
+	@Transactional
+	public int modifyVaccinePriceByCountry(double newPrice, String country) {
+		return coronaRepo.updatePriceByCountry(newPrice,country);
+	}
+
+	@Override
+	public int removeVaccineByPriceRange(double startPrice, double endPrice) {
+		return coronaRepo.removeVaccineByPriceRange(startPrice, endPrice);
+	}
+
+	@Override
+	public int registerVaccine(long regNo, String company, String country, String name, Double price, int dose) {
+		return coronaRepo.insertVaccine(regNo, company, country, name, price, dose);
 	}
 }

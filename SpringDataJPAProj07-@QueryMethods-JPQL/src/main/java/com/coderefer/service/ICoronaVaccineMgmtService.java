@@ -16,5 +16,8 @@ public interface ICoronaVaccineMgmtService {
     String fetchVaccineByCountryName(String country);
     Long fetchVaccinesCount();
     Object getVaccinesAggregate(Double minPrice, Double maxPrice);
+    int modifyVaccinePriceByCountry(double newPrice, String country);
+    int removeVaccineByPriceRange(double starPrice, double endPrice);
+    int registerVaccine(long regNo, String company, String country, String name, Double price, int dose);
 
 }

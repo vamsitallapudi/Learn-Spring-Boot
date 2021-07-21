@@ -3,9 +3,11 @@ package com.coderefer.repo;
 
 import com.coderefer.entity.CoronaVaccine;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,4 +56,21 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     @Query("select count(*), MIN(price), MAX(price) from CoronaVaccine where price BETWEEN :minPrice and :maxPrice")
     Object getVaccinesAggregateByPriceRange(Double minPrice, Double maxPrice);
 
+//    ###################### Non-Select Operations (DML Operations) #########################
+    @Modifying
+    @Query("UPDATE CoronaVaccine set price=:newPrice where country=:country")
+//    @Transactional //commented because for this we're keeping in service.
+    int updatePriceByCountry(double newPrice, String country);
+
+    @Modifying
+    @Query("delete from CoronaVaccine where price between :startPrice and :endPrice")
+    @Transactional
+    int removeVaccineByPriceRange(double startPrice, double endPrice);
+    /**
+     * ###################### Non-Select Operations (DML Operations) #########################
+     * */
+    @Modifying
+    @Query(value="INSERT INTO corona_vaccine VALUES (?,?,?,?,?,?);", nativeQuery = true)
+    @Transactional
+    int insertVaccine(long regNo, String company, String country, String name, Double price, int dose);
 }
