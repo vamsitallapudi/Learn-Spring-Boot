@@ -51,12 +51,17 @@ public class CrudRepoTestRunner implements CommandLineRunner {
             System.out.println();
 
             System.out.println("################# Native SQL Queries ###########################");
-            int count = service.registerVaccine(1001L, "serum", "India", "Sinopharm", 200.0, 1);
-            if(count == 0) {
-                System.out.println("Record not inserted");
-            } else {
-                System.out.println("Record Inserted");
-            }
+//            int count = service.registerVaccine(1001L, "serum", "India", "Sinopharm", 200.0, 1);
+//            if(count == 0) {
+//                System.out.println("Record not inserted");
+//            } else {
+//                System.out.println("Record Inserted");
+//            }
+            System.out.println("######## Printing Date ########");
+            System.out.println(service.getSysDate());
+            System.out.println("#######################");
+
+
         } catch (DataAccessException e) {
             e.printStackTrace();
         }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -81,5 +82,10 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public int registerVaccine(long regNo, String company, String country, String name, Double price, int dose) {
 		return coronaRepo.insertVaccine(regNo, company, country, name, price, dose);
+	}
+
+	@Override
+	public Date getSysDate() {
+		return coronaRepo.fetchSystemDate();
 	}
 }

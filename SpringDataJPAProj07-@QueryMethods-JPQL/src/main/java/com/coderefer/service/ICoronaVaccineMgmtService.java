@@ -2,6 +2,7 @@ package com.coderefer.service;
 
 import com.coderefer.entity.CoronaVaccine;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,5 +20,6 @@ public interface ICoronaVaccineMgmtService {
     int modifyVaccinePriceByCountry(double newPrice, String country);
     int removeVaccineByPriceRange(double starPrice, double endPrice);
     int registerVaccine(long regNo, String company, String country, String name, Double price, int dose);
+    Date getSysDate();
 
 }

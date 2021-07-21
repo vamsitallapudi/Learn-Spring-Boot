@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,4 +74,8 @@ public interface ICoronaVaccineRepo extends JpaRepository<CoronaVaccine, Long> {
     @Query(value="INSERT INTO corona_vaccine VALUES (?,?,?,?,?,?);", nativeQuery = true)
     @Transactional
     int insertVaccine(long regNo, String company, String country, String name, Double price, int dose);
+
+    @Transactional
+    @Query(value = "SELECT SYSDATE() from dual", nativeQuery = true)
+    Date fetchSystemDate();
 }
