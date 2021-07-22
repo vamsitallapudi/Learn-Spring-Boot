@@ -16,7 +16,8 @@ public class CrudRepoTestRunner implements CommandLineRunner {
     private final ICoronaVaccineMgmtService service;
 
     @Autowired
-    public CrudRepoTestRunner(ICoronaVaccineMgmtService service) {
+    public CrudRepoTest
+    Runner(ICoronaVaccineMgmtService service) {
         this.service = service;
     }
 
