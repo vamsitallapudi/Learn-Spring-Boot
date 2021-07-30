@@ -12,6 +12,8 @@ public class StoredProcedureRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        service.searchVaccineByPriceRange(400.0,900.0).forEach(System.out::println);
+//        service.searchVaccineByPriceRange(400.0,900.0).forEach(System.out::println);
+//        service.getVaccineByName("covaxin").forEach(System.out::println);
+        service.getEmpDetailsByCompany("Amazon", "HCL").forEach(System.out::println);
     }
 }
