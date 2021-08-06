@@ -23,7 +23,7 @@ public class Person {
     @NonNull
     private String addr;
 
-    @OneToMany(targetEntity = PhoneNumber.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = PhoneNumber.class,cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "PERSON_ID", referencedColumnName ="PID")
     private Set<PhoneNumber> contactDetails;
 
