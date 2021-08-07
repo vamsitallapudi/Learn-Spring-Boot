@@ -26,6 +26,6 @@ public class Person {
     }
 
     public Person() {
-        System.out.println("pid = " + pid);
+        System.out.println("person constructor");
     }
 }

@@ -16,20 +16,22 @@ public class AssociationsTestRunner implements CommandLineRunner {
     private IRtoMgmtService service;
     @Override
     public void run(String... args) throws Exception {
-//        prepare objects
-//        prepare parent object
-        Person per = new Person();
-        per.setPid(new Random().nextInt(10000));
-        per.setPname("Vamsi");
-        per.setPadd("Miyapur");
-//        prepare child object
-        DrivingLicense license = new DrivingLicense();
-        license.setId((long)(new Random().nextInt(50000)));
-        license.setType("2 wheeler");
-        license.setExpiryDate(LocalDateTime.of(2040, 10, 13, 12, 45));
-        per.setDrivingLicense(license);
-//        System.out.println(service.savePersonWithLicense(per));
-        System.out.println(service.saveLicenseWithPerson(license));
+////        prepare objects
+////        prepare parent object
+//        Person per = new Person();
+//        per.setPid(new Random().nextInt(10000));
+//        per.setPname("Vamsi");
+//        per.setPadd("Miyapur");
+////        prepare child object
+//        DrivingLicense license = new DrivingLicense();
+//        license.setId((long)(new Random().nextInt(50000)));
+//        license.setType("2 wheeler");
+//        license.setExpiryDate(LocalDateTime.of(2040, 10, 13, 12, 45));
+//        per.setDrivingLicense(license);
+////        System.out.println(service.savePersonWithLicense(per));
+//        System.out.println(service.saveLicenseWithPerson(license));
+
+        service.fetchAllPersons().forEach(System.out::println);
 
     }
 }

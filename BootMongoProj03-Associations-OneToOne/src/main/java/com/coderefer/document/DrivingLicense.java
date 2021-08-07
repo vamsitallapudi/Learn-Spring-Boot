@@ -28,6 +28,6 @@ public class DrivingLicense {
     }
 
     public DrivingLicense() {
-        System.out.println("id = " + id);
+        System.out.println("driving license constructor");
     }
 }
