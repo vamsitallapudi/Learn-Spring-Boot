@@ -1,5 +1,7 @@
 package com.coderefer.learnconcepts;
 
+import java.util.concurrent.locks.Lock;
+
 public class JavaObjectLockEg {
     public static void main(String[] args) {
         JavaObjectLockEg eg = new JavaObjectLockEg();
