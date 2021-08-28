@@ -41,7 +41,8 @@ public class UserDaoService {
     }
 
     public void deleteById(int id) {
-        users.stream().filter(u -> u.getId() == id).findAny().orElseThrow(userNotFound);
+        User user = users.stream().filter(u -> u.getId() == id).findAny().orElseThrow(userNotFound);
+        users.remove(user);
     }
 
 }
