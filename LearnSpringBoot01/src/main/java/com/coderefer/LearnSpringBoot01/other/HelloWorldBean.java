@@ -1,4 +1,4 @@
-package com.coderefer.LearnSpringBoot01;
+package com.coderefer.LearnSpringBoot01.other;
 
 import lombok.Data;
 
