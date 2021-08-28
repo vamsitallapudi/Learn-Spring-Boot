@@ -3,8 +3,11 @@ package com.coderefer.LearnSpringBoot01.controller;
 import com.coderefer.LearnSpringBoot01.entity.User;
 import com.coderefer.LearnSpringBoot01.service.UserDaoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -24,7 +27,9 @@ public class UserController {
     }
 
     @PostMapping("/users/create")
-    public void createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@RequestBody User user) {
        User newUser = service.save(user);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newUser.getId()).toUri();
+        return ResponseEntity.created(uri).build();
     }
 }

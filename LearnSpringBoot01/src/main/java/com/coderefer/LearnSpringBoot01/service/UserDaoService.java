@@ -1,6 +1,7 @@
 package com.coderefer.LearnSpringBoot01.service;
 
 import com.coderefer.LearnSpringBoot01.entity.User;
+import com.coderefer.LearnSpringBoot01.utils.exceptions.UserNotFoundException;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -32,7 +33,9 @@ public class UserDaoService {
     }
 
     public User findOne(int id) {
-        return users.stream().filter(user -> user.getId() == id).findFirst().orElseThrow();
+        return users.stream().filter(user -> user.getId() == id)
+                .findFirst()
+                .orElseThrow(()->new UserNotFoundException("user not found"));
     }
 
 }
