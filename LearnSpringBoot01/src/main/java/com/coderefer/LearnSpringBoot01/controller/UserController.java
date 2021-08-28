@@ -28,8 +28,14 @@ public class UserController {
 
     @PostMapping("/users/create")
     public ResponseEntity<User> createUser(@RequestBody User user) {
-       User newUser = service.save(user);
+        User newUser = service.save(user);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newUser.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @DeleteMapping("/users/delete/{id}")
+    public ResponseEntity<User> deleteUser(@PathVariable int id) {
+        service.deleteById(id);
+        return ResponseEntity.ok().build();
     }
 }
