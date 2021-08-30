@@ -8,7 +8,7 @@ import java.util.Date;
 @Getter
 @AllArgsConstructor
 public class ExceptionResponse {
-    private Date date;
-    private String message;
-    private String details;
+    private final Date date;
+    private final String message;
+    private final String details;
 }
