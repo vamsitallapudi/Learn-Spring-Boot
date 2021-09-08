@@ -3,6 +3,7 @@ package com.coderefer.learnspringsecurity.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -12,6 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+import static com.coderefer.learnspringsecurity.security.ApplicationUserPermission.*;
 import static com.coderefer.learnspringsecurity.security.ApplicationUserRole.*;
 
 @Configuration
@@ -32,6 +34,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
                 .antMatchers("/api/**").hasRole(STUDENT.name())
+                .antMatchers(HttpMethod.DELETE,"/management/api/**").hasAuthority(COURSE_WRITE.getPermission())
+                .antMatchers(HttpMethod.PUT,"/management/api/**").hasAuthority(COURSE_WRITE.getPermission())
+                .antMatchers(HttpMethod.POST,"/management/api/**").hasAuthority(COURSE_WRITE.getPermission())
+                .antMatchers(HttpMethod.GET,"/management/api/**").hasAuthority(COURSE_READ.getPermission())
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -45,22 +51,23 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 User.builder()
                         .username("vamsi")
                         .password(passwordEncoder.encode("password"))
-                        .roles(STUDENT.toString())
+                        .authorities(STUDENT.getGrantedAuthorities())
                         .build();
 
         UserDetails krishna =
                 User.builder()
                         .username("krishna")
                         .password(passwordEncoder.encode("password123"))
-                        .roles(ADMIN.toString())
+                        .authorities(ADMIN.getGrantedAuthorities())
                         .build();
 
         UserDetails tallapudi =
                 User.builder()
                         .username("tallapudi")
                         .password(passwordEncoder.encode("password123"))
-                        .roles(ADMINTRAINEE.name())
+                        .authorities(ADMINTRAINEE.getGrantedAuthorities())
                         .build();
+
         return new InMemoryUserDetailsManager(vamsi, krishna, tallapudi);
     }
 }
