@@ -12,6 +12,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+import static com.coderefer.learnspringsecurity.security.ApplicationUserRole.*;
+
 @Configuration
 @EnableWebSecurity
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -26,9 +28,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/", "index", "/css/*", "/js/*")
-                .permitAll()
+                .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
+                .antMatchers("/api/**").hasRole(STUDENT.name())
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -42,9 +45,23 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 User.builder()
                         .username("vamsi")
                         .password(passwordEncoder.encode("password"))
-                        .roles("STUDENT")
+                        .roles(STUDENT.toString())
                         .build();
-        return new InMemoryUserDetailsManager(vamsi);
+
+        UserDetails krishna =
+                User.builder()
+                        .username("krishna")
+                        .password(passwordEncoder.encode("password123"))
+                        .roles(ADMIN.toString())
+                        .build();
+
+        UserDetails tallapudi =
+                User.builder()
+                        .username("tallapudi")
+                        .password(passwordEncoder.encode("password123"))
+                        .roles(ADMINTRAINEE.name())
+                        .build();
+        return new InMemoryUserDetailsManager(vamsi, krishna, tallapudi);
     }
 }
 
