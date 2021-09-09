@@ -26,6 +26,13 @@ public class StudentMgmtController {
         return students;
     }
 
+
+    @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
+    public Student getStudent(@PathVariable Integer id) {
+        return students.stream().filter(s -> s.getId().equals(id)).findFirst().orElseThrow();
+    }
+
     @PostMapping
     @PreAuthorize("hasAuthority('student:write')")
     public ResponseEntity<Student> registerNewStudent(@RequestBody Student student) {
