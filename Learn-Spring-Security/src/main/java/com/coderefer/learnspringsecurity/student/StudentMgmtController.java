@@ -1,5 +1,8 @@
 package com.coderefer.learnspringsecurity.student;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -18,23 +21,28 @@ public class StudentMgmtController {
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
     public List<Student> getAllStudents() {
         return students;
     }
 
     @PostMapping
-    public void registerNewStudent(@RequestBody Student student) {
+    @PreAuthorize("hasAuthority('student:write')")
+    public ResponseEntity<Student> registerNewStudent(@RequestBody Student student) {
         students.add(student);
-        System.out.println(student);
+        return ResponseEntity.ok(student);
     }
 
     @DeleteMapping(path = "{studentId}")
+    @PreAuthorize("hasAuthority('student:write')")
     public void deleteStudent(@PathVariable("studentId") Integer id) {
         students.removeIf(student -> student.getId().equals(id));
         System.out.println(id);
     }
     @PutMapping(path = "{studentId}")
-    public Student updateStudent(@PathVariable("studentId") Integer studentId, @RequestBody Student student) {
+    @PreAuthorize("hasAuthority('student:write')")
+    public Student updateStudent(@PathVariable("studentId") Integer studentId,
+                                 @RequestBody Student student) {
         students.removeIf(s -> s.getId().equals(studentId));
         students.add(student);
         return student;
