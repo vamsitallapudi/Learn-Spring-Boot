@@ -17,5 +17,6 @@ public class MyRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         service.hello();
         service.pause();
+        service.myStud();
     }
 }
