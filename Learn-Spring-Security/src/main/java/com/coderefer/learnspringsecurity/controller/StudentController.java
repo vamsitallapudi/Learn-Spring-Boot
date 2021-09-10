@@ -1,5 +1,7 @@
-package com.coderefer.learnspringsecurity.student;
+package com.coderefer.learnspringsecurity.controller;
 
+import com.coderefer.learnspringsecurity.entity.Student;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/students")
+@RequestMapping("common/api/v1/students")
 public class StudentController {
 
     private static final List<Student> STUDENT_LIST = Arrays.asList(
@@ -24,5 +26,10 @@ public class StudentController {
                 .filter(s -> s.id.equals(id))
                 .findFirst()
                 .orElseThrow(()-> new IllegalStateException("Student with " + id + " doesn't exist"));
+    }
+
+    @GetMapping
+    public List<Student> getAllStudents() {
+        return STUDENT_LIST;
     }
 }

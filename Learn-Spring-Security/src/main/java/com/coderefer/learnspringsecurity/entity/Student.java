@@ -1,4 +1,4 @@
-package com.coderefer.learnspringsecurity.student;
+package com.coderefer.learnspringsecurity.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

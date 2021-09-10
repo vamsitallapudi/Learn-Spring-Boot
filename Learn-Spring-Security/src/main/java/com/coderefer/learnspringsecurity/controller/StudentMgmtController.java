@@ -1,6 +1,6 @@
-package com.coderefer.learnspringsecurity.student;
+package com.coderefer.learnspringsecurity.controller;
 
-import org.springframework.http.HttpStatus;
+import com.coderefer.learnspringsecurity.entity.Student;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
