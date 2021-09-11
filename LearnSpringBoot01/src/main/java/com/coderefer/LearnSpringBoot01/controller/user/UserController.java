@@ -1,4 +1,4 @@
-package com.coderefer.LearnSpringBoot01.controller;
+package com.coderefer.LearnSpringBoot01.controller.user;
 
 import com.coderefer.LearnSpringBoot01.entity.User;
 import com.coderefer.LearnSpringBoot01.service.UserDaoService;

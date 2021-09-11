@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 @Component
 public class UserDaoService {
-    private static List<User> users = new ArrayList<>();
+    private static final List<User> users = new ArrayList<>();
 
     private static int usersCount = 3;
     Supplier<UserNotFoundException> userNotFound = () -> new UserNotFoundException("user not found");

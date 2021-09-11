@@ -9,13 +9,13 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-public class ApiController {
+public class RestTemplateApiController {
     @Autowired
     private RestTemplate restTemplate;
 
     private static final String URL = "http://localhost:8080/common/api/v1/students";
 
-    @GetMapping("/students")
+    @GetMapping("/rest-template/students")
     public List<Object> getStudents() {
         Object[] students = restTemplate.getForObject(URL, Object[].class);
         return Arrays.asList(students);
