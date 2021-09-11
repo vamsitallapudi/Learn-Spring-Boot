@@ -3,6 +3,7 @@ package com.coderefer.LearnSpringBoot01.controller.helloWorld;
 import com.coderefer.LearnSpringBoot01.other.HelloWorldBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -22,10 +23,8 @@ public class HelloWorldController {
     }
 
     @GetMapping("/hello-world-international")
-    public String getHelloWorldInternationalized(
-            @RequestHeader(name = "Accept-Language", required = false) Locale locale
-    ) {
-        return messageSource.getMessage("good.morning.message", null, "hello world!!", locale);
+    public String getHelloWorldInternationalized() {
+        return messageSource.getMessage("good.morning.message", null, "hello world!!",  LocaleContextHolder.getLocale());
     }
 
 
