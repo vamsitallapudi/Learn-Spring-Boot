@@ -14,7 +14,6 @@ public class User {
     private Integer id;
     @Size(min = 2, message = "Name should have atleast 2 characters")
     private String name;
-    @JsonIgnore
     @Past(message = "Birth date shouldn't be a future date")
     private Date birthDate;
 }
