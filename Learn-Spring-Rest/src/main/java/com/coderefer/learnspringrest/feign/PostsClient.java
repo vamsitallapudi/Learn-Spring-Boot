@@ -2,7 +2,6 @@ package com.coderefer.learnspringrest.feign;
 
 
 import com.coderefer.learnspringrest.entity.PostResponse;
-import com.coderefer.learnspringrest.entity.Student;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
