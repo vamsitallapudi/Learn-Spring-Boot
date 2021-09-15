@@ -1,24 +1,27 @@
 package com.coderefer.currencyexchangeservice.controller;
 
 import com.coderefer.currencyexchangeservice.entity.CurrencyExchange;
+import com.coderefer.currencyexchangeservice.service.CurrencyExchangeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import java.math.BigDecimal;
-
-import org.springframework.core.env.Environment;
+import java.util.Optional;
 
 @RestController
 public class CurrencyExchangeController {
     @Autowired
-    private Environment env;
+    private CurrencyExchangeService exchangeService;
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public CurrencyExchange retrieveExchangeValue(
             @PathVariable String from, @PathVariable String to
-    ) {
-        String port = env.getProperty("local.server.port");
-        return new CurrencyExchange(1000L,from, to, BigDecimal.valueOf(50), port);
+    ) throws RuntimeException {
+        Optional<CurrencyExchange> currencyExchangeOptional = exchangeService.findCurrencyExchange(from, to);
+        if (currencyExchangeOptional.isPresent()) {
+            return currencyExchangeOptional.get();
+        } else {
+            throw new RuntimeException();
+        }
     }
 }
 
