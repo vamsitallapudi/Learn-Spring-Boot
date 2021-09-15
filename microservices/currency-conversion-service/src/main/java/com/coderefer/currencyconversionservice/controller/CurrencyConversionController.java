@@ -38,7 +38,7 @@ public class CurrencyConversionController {
                 response.getConversionMultiple(),
                 CurrencyConversionUtils
                         .calculateTotalAmount(response.getConversionMultiple(), quantity),
-                ""
+                response.getEnvironment()
         );
     }
 
@@ -64,7 +64,7 @@ public class CurrencyConversionController {
                 response.getConversionMultiple(),
                 CurrencyConversionUtils
                         .calculateTotalAmount(response.getConversionMultiple(), quantity),
-                ""
+                response.getEnvironment()
         );
     }
 }
