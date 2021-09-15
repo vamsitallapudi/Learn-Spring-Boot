@@ -2,6 +2,7 @@ package com.coderefer.currencyconversionservice.controller;
 
 import com.coderefer.currencyconversionservice.entity.CurrencyConversion;
 import com.coderefer.currencyconversionservice.exception.CurrencyConversionException;
+import com.coderefer.currencyconversionservice.proxy.CurrencyConversionFeignClient;
 import com.coderefer.currencyconversionservice.response.CurrencyConversionResponse;
 import com.coderefer.currencyconversionservice.utils.CurrencyConversionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,28 @@ import java.util.HashMap;
 public class CurrencyConversionController {
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    private CurrencyConversionFeignClient currencyConversionFeignClient;
+
+    @GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
+    public CurrencyConversion calcCurrencyConversionWithFeign(
+            @PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity
+    ) {
+        CurrencyConversionResponse response = currencyConversionFeignClient.getCurrencyExchangeRates(from, to);
+        if (response == null) {
+            throw new CurrencyConversionException("Unable to convert currency");
+        }
+        return new CurrencyConversion(response.getId(),
+                response.getFrom(),
+                response.getTo(),
+                quantity,
+                response.getConversionMultiple(),
+                CurrencyConversionUtils
+                        .calculateTotalAmount(response.getConversionMultiple(), quantity),
+                ""
+        );
+    }
 
     @GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversion calculateCurrencyConversion(
