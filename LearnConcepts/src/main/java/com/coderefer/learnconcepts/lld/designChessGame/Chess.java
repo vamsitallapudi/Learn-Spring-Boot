@@ -1,4 +1,4 @@
-package com.coderefer.learnconcepts.lld;
+package com.coderefer.learnconcepts.lld.designChessGame;
 
 
 import java.util.List;
