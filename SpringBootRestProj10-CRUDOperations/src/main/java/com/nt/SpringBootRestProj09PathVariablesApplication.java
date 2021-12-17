@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootRestProj07JsonToCollectionObjectsUsingRequestBodyApplication {
+public class SpringBootRestProj09PathVariablesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootRestProj07JsonToCollectionObjectsUsingRequestBodyApplication.class, args);
+		SpringApplication.run(SpringBootRestProj09PathVariablesApplication.class, args);
 	}
+
 }
