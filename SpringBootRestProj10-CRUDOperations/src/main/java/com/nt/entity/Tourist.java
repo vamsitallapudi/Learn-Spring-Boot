@@ -1,19 +1,29 @@
 package com.nt.entity;
 
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Table(name = "REST_TOURIST")
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class Tourist {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer tId;
+    private Integer tId;
+    @Column(length = 20)
     @NonNull
-    String name;
+    private String name;
+    @Column(length = 20)
+    @NonNull
+    private String city;
+
+    @Column(length = 20)
+    @NonNull
+    private String packageType;
+    @NonNull
+    private Double budget;
 }
