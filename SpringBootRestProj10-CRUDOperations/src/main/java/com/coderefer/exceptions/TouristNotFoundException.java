@@ -1,4 +1,4 @@
-package com.nt.exceptions;
+package com.coderefer.exceptions;
 
 public class TouristNotFoundException extends Exception {
     public TouristNotFoundException(String s) {

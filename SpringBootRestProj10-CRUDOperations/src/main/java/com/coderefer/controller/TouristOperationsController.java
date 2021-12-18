@@ -1,8 +1,8 @@
-package com.nt.controller;
+package com.coderefer.controller;
 
-import com.nt.entity.Tourist;
-import com.nt.exceptions.TouristNotFoundException;
-import com.nt.service.ITouristMgmtService;
+import com.coderefer.entity.Tourist;
+import com.coderefer.exceptions.TouristNotFoundException;
+import com.coderefer.service.ITouristMgmtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

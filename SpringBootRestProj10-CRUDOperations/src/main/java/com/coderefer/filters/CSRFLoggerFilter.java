@@ -1,11 +1,9 @@
-package com.nt.filters;
+package com.coderefer.filters;
 
-import com.nt.security.SpringSecurityConfiguration;
+import com.coderefer.security.SpringSecurityConfiguration;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;

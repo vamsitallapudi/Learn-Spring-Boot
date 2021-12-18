@@ -1,8 +1,8 @@
-package com.nt.service;
+package com.coderefer.service;
 
-import com.nt.entity.Tourist;
-import com.nt.exceptions.TouristNotFoundException;
-import com.nt.repo.ITouristRepo;
+import com.coderefer.entity.Tourist;
+import com.coderefer.exceptions.TouristNotFoundException;
+import com.coderefer.repo.ITouristRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

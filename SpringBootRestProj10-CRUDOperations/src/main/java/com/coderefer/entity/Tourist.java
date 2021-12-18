@@ -1,4 +1,4 @@
-package com.nt.entity;
+package com.coderefer.entity;
 
 import lombok.*;
 

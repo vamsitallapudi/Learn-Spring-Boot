@@ -1,7 +1,7 @@
-package com.nt.service;
+package com.coderefer.service;
 
-import com.nt.entity.Tourist;
-import com.nt.exceptions.TouristNotFoundException;
+import com.coderefer.entity.Tourist;
+import com.coderefer.exceptions.TouristNotFoundException;
 
 import java.util.List;
 
