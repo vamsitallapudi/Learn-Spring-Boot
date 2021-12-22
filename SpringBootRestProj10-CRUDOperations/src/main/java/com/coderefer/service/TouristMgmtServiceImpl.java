@@ -29,6 +29,11 @@ public class TouristMgmtServiceImpl implements ITouristMgmtService{
     }
 
     @Override
+    public String testAop() {
+        return "Hello from aop";
+    }
+
+    @Override
     public Tourist findTouristById(Integer id) throws TouristNotFoundException {
         return repo.findById(id).orElseThrow(()-> new TouristNotFoundException(id + "tourist not found"));
     }

@@ -8,6 +8,9 @@ import java.util.List;
 public interface ITouristMgmtService {
     String registerTourist(Tourist tourist);
     List<Tourist> fetchAllTourist();
+
+    String testAop();
+
     Tourist findTouristById(Integer id) throws TouristNotFoundException;
     String updateTouristDetails(Tourist tourist) throws TouristNotFoundException;
 }
