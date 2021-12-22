@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/tourist")
 public class TouristOperationsController {
     @Autowired
     private ITouristMgmtService service;
