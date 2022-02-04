@@ -8,10 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 @Component
 public class ActiveMQMsgSenderRunner implements CommandLineRunner {
-    @Autowired
-    private JmsTemplate template;
     @Override
     public void run(String... args) throws Exception {
-        template.send("test first mq!", session -> session.createTextMessage("From Vamsi at " + new Date()));
     }
 }
