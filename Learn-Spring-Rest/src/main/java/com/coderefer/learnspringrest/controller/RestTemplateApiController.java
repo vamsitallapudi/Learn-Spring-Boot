@@ -13,7 +13,7 @@ public class RestTemplateApiController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String URL = "http://localhost:8081/common/api/v1/students";
+    private static final String URL = "https://flourishing-starlight-8e274f.netlify.app/students.json";
 
     @GetMapping("/rest-template/students")
     public List<Object> getStudents() {
