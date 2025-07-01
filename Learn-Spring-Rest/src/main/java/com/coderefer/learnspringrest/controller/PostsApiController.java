@@ -14,7 +14,7 @@ public class PostsApiController {
     @Autowired
     private PostsClient postsClient;
 
-    @GetMapping("/get-posts")
+    @GetMapping("/posts")
     public List<PostResponse> getPosts() {
         return postsClient.getPosts();
     }
