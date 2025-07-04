@@ -87,7 +87,10 @@ public class PostsApiController {
     // Header Based Versioning
     @GetMapping(value = "/posts")
     public ResponseEntity<List<? extends Post>> getPosts(
-            @RequestHeader("X-API-Version") String apiVersion) {
+            @RequestHeader("X-API-Version") String apiVersion, HttpServletRequest request) {
+        String ip = getClientIP(request);
+        Bucket bucket = resolveBucket(ip);
+        if (bucket.tryConsume(1)) {
         try {
             log.info("Fetching posts with version: {}", apiVersion);
             if (apiVersion.equalsIgnoreCase("1")) {
@@ -104,7 +107,10 @@ public class PostsApiController {
             }
         } catch (Exception e) {
             log.error("Error fetching posts with version: {}", apiVersion, e);
-            return ResponseEntity.internalServerError().build();
+                return ResponseEntity.internalServerError().build();
+            }
+        } else {
+            return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).build();
         }
     }
 }

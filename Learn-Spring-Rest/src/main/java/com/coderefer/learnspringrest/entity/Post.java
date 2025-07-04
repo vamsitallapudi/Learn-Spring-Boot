@@ -1,7 +1,9 @@
 package com.coderefer.learnspringrest.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Objects;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Post {
     private int id;
     private String title;
